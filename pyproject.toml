@@ -1,0 +1,46 @@
+[project]
+name = "business-cards"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pillow>=11.1.0",
+    "qrcode>=8.0",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I"]
+extend-safe-fixes = ["I"]
+
+# First iteration just enable a common set
+select = [
+    #"ALL",
+    # pycodestyle
+    "E",
+    # pydocstyle
+    #"D",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flage8-annotations
+    "ANN",
+    # flake8-bugbear
+    "B",
+    # flake8-bandit
+    "S",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.394",
+    "ruff>=0.9.6",
+]
